@@ -2,128 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Saksham Resume</title>
-  <style>
-    body {
-      background-color: lightyellow;
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-    header, section {
-      margin-bottom: 30px;
-    }
-    h1, h2 {
-      text-align: center;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-    table, th, td {
-      border: 1px solid black;
-    }
-    th, td {
-      padding: 10px;
-      text-align: center;
-    }
-    .section-title {
-      font-size: 20px;
-      font-weight: bold;
-      color: black;
-      margin-bottom: 10px;
-    }
-  </style>
+  <title>Register for Camping Adventure</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: cyan ; font-family: Arial, Helvetica, sans-serif;">
+  <header>
+    <h1 style="color: green; font-size: 20">Camping Adventure Registration</h1>
+    <nav style="padding-left: 200px;">
+      <a href="index.html">Home</a> | 
+      <a href="packages.html">Packages</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Resume</h1>
-  <h2>Saksham</h2>
-  <p><strong>URN:</strong> 2435157</p>
-  <p>1st Year B.Tech Student</p>
-  <p>Guru Nanak Dev Engineering College, Ludhiana</p>
-</header>
+  <section>
+    <form style="background-color: rgb(96, 205, 255); padding: 20px; max-width: 500px; align-content: center;"
+            action="index.html"
+            target="_self"
+            onsubmit="alert('Thank you for registering! Redirecting to Home page..')">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+      <br>
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="5" max="100" required>
+      <br>
+      <label for="activity">Select Activity:</label>
+      <select id="activity" name="activity">
+        <option>Hiking</option>
+        <option>Fishing</option>
+        <option>Canoeing</option>
+        <option>Campfire Stories</option>
+      </select>
 
-<section>
-  <div class="section-title">Education</div>
-  <table>
-    <tr>
-      <th>S.No.</th>
-      <th>Degree</th>
-      <th>Year</th>
-      <th>Board</th>
-      <th>Grade</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>B.Tech</td>
-      <td>2028</td>
-      <td>PTU</td>
-      <td>CGPA 9.65</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>12th</td>
-      <td>2024</td>
-      <td>CBSE</td>
-      <td>93.8%</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>10th</td>
-      <td>2022</td>
-      <td>CBSE</td>
-      <td>93%</td>
-    </tr>
-  </table>
-</section>
+      <div class="radio-group">
+        <label>Food Preference:</label>
+        <input type="radio" id="veg" name="food" value="Vegetarian" required>
+        <label for="veg">Vegetarian</label>
+        <input type="radio" id="nonveg" name="food" value="Non-Vegetarian">
+        <label for="nonveg">Non-Vegetarian</label>
+      </div>
 
-<section>
-  <div class="section-title">Objective</div>
-  <p>To become a Software Engineer.</p>
-</section>
+      <div class="checkbox-group">
+        <input type="checkbox" id="gear" name="gear">
+        <label for="gear">Need Camping Gear</label>
+      </div>
 
-<section>
-  <div class="section-title">Skills</div>
-  <ul>
-    <li>Full Stack Developer</li>
-    <li>Technical Skills: Python, NumPy, Matplotlib</li>
-    <li>Soft Skills: Teamwork, Problem-solving</li>
-  </ul>
-</section>
+      <label for="notes">Additional Notes:</label>
+      <br>
+      <textarea id="notes" name="notes" rows="4"></textarea>
+      <br>
+      <button type="submit" class="btn btn-success" target="">Submit Registration</button>
+    </form>
+  </section>
 
-<section>
-  <div class="section-title">Projects</div>
-  <ul>
-    <li>Developed a game using Python</li>
-    <li>Developed a mobile application</li>
-  </ul>
-</section>
-
-<section>
-  <div class="section-title">Experience</div>
-  <p>6 years of working experience at Google</p>
-</section>
-
-<section>
-  <div class="section-title">Achievements</div>
-  <p>Won an international-level Hackathon</p>
-</section>
-
-<section>
-  <div class="section-title">Contact</div>
-  <p><strong>Phone:</strong> 9888478606</p>
-  <p><strong>Address:</strong> , Punjab</p>
-</section>
-
-<section>
-  <div class="section-title">Visit</div>
-  <a href="https://www.google.com/chrome/index.html" target="_blank">
-    <img src="https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908_1280.png" width="100" height="100" alt="Google Chrome Logo">
-    <p>Google Chrome Website</p>
-  </a>
-</section>
+  <footer style="padding-left: 200px;">
+    <p>&copy; 2025 Camping Adventures</p>
+  </footer>
 
 </body>
 </html>
